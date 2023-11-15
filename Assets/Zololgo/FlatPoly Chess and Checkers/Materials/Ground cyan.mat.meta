@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 487b7a403a4dc194c82cb2822edf07a9
+timeCreated: 1472760450
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104559
+  packageName: 'FlatPoly: Chess and Checkers'
+  packageVersion: 1.1
+  assetPath: Assets/Zololgo/FlatPoly Chess and Checkers/Materials/Ground cyan.mat
+  uploadId: 227103

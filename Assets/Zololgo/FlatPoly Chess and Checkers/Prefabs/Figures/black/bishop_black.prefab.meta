@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 4a8b7cc9ea10c344db15ecb7d1b0b9c7
+timeCreated: 1510606413
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104559
+  packageName: 'FlatPoly: Chess and Checkers'
+  packageVersion: 1.1
+  assetPath: Assets/Zololgo/FlatPoly Chess and Checkers/Prefabs/Figures/black/bishop_black.prefab
+  uploadId: 227103

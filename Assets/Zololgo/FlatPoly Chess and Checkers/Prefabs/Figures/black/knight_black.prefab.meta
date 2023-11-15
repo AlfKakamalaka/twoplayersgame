@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: dab7a9048c6048148a328e068e38d10a
+timeCreated: 1510606431
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104559
+  packageName: 'FlatPoly: Chess and Checkers'
+  packageVersion: 1.1
+  assetPath: Assets/Zololgo/FlatPoly Chess and Checkers/Prefabs/Figures/black/knight_black.prefab
+  uploadId: 227103

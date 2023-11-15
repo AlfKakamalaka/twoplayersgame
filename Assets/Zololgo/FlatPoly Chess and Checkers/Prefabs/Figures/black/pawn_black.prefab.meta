@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 8c8f9cb4976d4834b9fb1cd821d3b4df
+timeCreated: 1510606436
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104559
+  packageName: 'FlatPoly: Chess and Checkers'
+  packageVersion: 1.1
+  assetPath: Assets/Zololgo/FlatPoly Chess and Checkers/Prefabs/Figures/black/pawn_black.prefab
+  uploadId: 227103

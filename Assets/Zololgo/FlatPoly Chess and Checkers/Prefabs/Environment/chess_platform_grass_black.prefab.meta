@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 7e11e78c695eeb947a2e2619a8a5c883
+timeCreated: 1510697580
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104559
+  packageName: 'FlatPoly: Chess and Checkers'
+  packageVersion: 1.1
+  assetPath: Assets/Zololgo/FlatPoly Chess and Checkers/Prefabs/Environment/chess_platform_grass_black.prefab
+  uploadId: 227103

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 40a834f4e1bcfa24abc7fafbc273f058
+timeCreated: 1510606422
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104559
+  packageName: 'FlatPoly: Chess and Checkers'
+  packageVersion: 1.1
+  assetPath: Assets/Zololgo/FlatPoly Chess and Checkers/Prefabs/Figures/white/checker_white.prefab
+  uploadId: 227103

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 23953964b26154b4189c74914a01980b
+timeCreated: 1510606444
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104559
+  packageName: 'FlatPoly: Chess and Checkers'
+  packageVersion: 1.1
+  assetPath: Assets/Zololgo/FlatPoly Chess and Checkers/Prefabs/Figures/black/rook_black.prefab
+  uploadId: 227103

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 2a2f07e5d6afa1f4c8e9c08de7fddef6
+timeCreated: 1510697571
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104559
+  packageName: 'FlatPoly: Chess and Checkers'
+  packageVersion: 1.1
+  assetPath: Assets/Zololgo/FlatPoly Chess and Checkers/Prefabs/Environment/chess_environment_tree_b_01.prefab
+  uploadId: 227103

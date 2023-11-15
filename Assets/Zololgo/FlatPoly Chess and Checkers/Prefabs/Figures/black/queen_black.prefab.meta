@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 9a57366190b0c6a47b68fc4326e4e304
+timeCreated: 1510606440
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104559
+  packageName: 'FlatPoly: Chess and Checkers'
+  packageVersion: 1.1
+  assetPath: Assets/Zololgo/FlatPoly Chess and Checkers/Prefabs/Figures/black/queen_black.prefab
+  uploadId: 227103

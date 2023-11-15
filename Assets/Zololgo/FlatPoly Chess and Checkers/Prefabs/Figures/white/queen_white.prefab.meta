@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b7981b3b86e9d3b4c94824267e12b09f
+timeCreated: 1510606440
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104559
+  packageName: 'FlatPoly: Chess and Checkers'
+  packageVersion: 1.1
+  assetPath: Assets/Zololgo/FlatPoly Chess and Checkers/Prefabs/Figures/white/queen_white.prefab
+  uploadId: 227103

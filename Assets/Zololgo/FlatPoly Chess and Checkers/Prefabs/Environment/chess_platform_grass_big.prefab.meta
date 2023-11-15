@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b6fabf9112b45984aaa90c0692da1663
+timeCreated: 1510697577
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104559
+  packageName: 'FlatPoly: Chess and Checkers'
+  packageVersion: 1.1
+  assetPath: Assets/Zololgo/FlatPoly Chess and Checkers/Prefabs/Environment/chess_platform_grass_big.prefab
+  uploadId: 227103
