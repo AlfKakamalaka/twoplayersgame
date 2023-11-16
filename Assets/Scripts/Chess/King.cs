@@ -13,9 +13,13 @@ public class King : BaseFigure
     
     public bool firstMove = true;
     public List<int2> retraceShah = new List<int2>();
+    
+
     public void RetraceShah(BaseFigure figure)
     {
         if(figure.color == color){return;}
+
+        shahFigure = figure;
         retraceShah.Clear();
         retraceShah.Add(figure.coords);
         switch (figure.type)
@@ -31,16 +35,24 @@ public class King : BaseFigure
                 RetraceRook(figure);
                 break;
         }
-        ChessManager.instance.KingSecurity(color);
-    }
+        if(color == FigureColor.White)
+            ChessManager.instance.isShahWhite = true;
+        else
+            ChessManager.instance.isShahBlack = true;
+        Debug.Log("End Retrace");
+        
+        ChessManager.instance.ClearAnalysis(true, shahFigure);
+        ChessManager.instance.RequstAnalysis(true,shahFigure);
 
+    }
+    
     public void OnDrawGizmos()
     {
         Gizmos.color = Color. blue;
         foreach (var cell in retraceShah)
         {
             Gizmos.DrawSphere(Grid.Instance.GetWorldPosition(cell.x, cell.y), 0.5f);
-            Debug.Log(coords.x + " " + coords.y);
+
         }
     }
 
@@ -159,6 +171,7 @@ public class King : BaseFigure
         {
             firstMove = false;
         }
+        retraceShah.Clear();
         return move;
     }
     

@@ -47,6 +47,7 @@ public class Pawn : BaseFigure
     private void CheckMoveCell(Grid grid,int x, int y)
     {
         if(!grid.IsOnBoard(x,y)){return;}
+        if(CheckNonRetraceMove(x, y)) return;
         if (grid.TypesOnBoard[x, y] == FigureType.None)
         {
             availableMoves.TryAdd(new int2(x, y), grid.ObjFigures[x, y]);
@@ -56,6 +57,7 @@ public class Pawn : BaseFigure
     private bool CheckKillCell(Grid grid, int x, int y)
     {
         if(!grid.IsOnBoard(x,y)){return false;}
+        if(CheckNonRetraceMove(x, y)) return false;
         if (grid.TypesOnBoard[x, y] != FigureType.None && grid.ObjFigures[x, y].color != color)
         {
             availableMoves.TryAdd(new int2(x, y), grid.ObjFigures[x, y]);

@@ -82,6 +82,7 @@ public class Queen : BaseFigure
     private void CalculateMove(Grid grid, int x, int y)
     {
         if(!grid.IsOnBoard(x,y)){return;}
+        if(CheckNonRetraceMove(x, y)) return;
         if (grid.TypesOnBoard[x, y] == FigureType.None )
         {
             availableMoves.TryAdd(new int2(x, y), grid.ObjFigures[x, y]);

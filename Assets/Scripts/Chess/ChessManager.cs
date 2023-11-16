@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Mime;
 using TMPro;
 using Unity.Mathematics;
@@ -56,12 +57,12 @@ public class ChessManager : MonoBehaviour
     public void NextRound()
     {
         ClearAnalysis();
-        RequstAnalysis();
+        
         CameraController.instance.RotateCamera();
         if (CheckIsShahWhite())
         {
             StartCoroutine(ShowPopupWithShah());
-            textShah.text = "Шах чёрным";
+            textShah.text = "Шах белым";
             isShahWhite = true;
         }
         else
@@ -73,7 +74,7 @@ public class ChessManager : MonoBehaviour
         {
             
             StartCoroutine(ShowPopupWithShah());
-            textShah.text = "Шах белым";
+            textShah.text = "Шах черным";
             isShahBlack = true;
         }
         else
@@ -82,7 +83,7 @@ public class ChessManager : MonoBehaviour
         }
         CheckIsMatBlack();
         CheckIsMatWhite();
-        
+        RequstAnalysis();
         round++;
         var nextPlayer = NextPlayer();
         if (nextPlayer != player && isAI)
@@ -94,25 +95,32 @@ public class ChessManager : MonoBehaviour
         
     }
 
-    public void ClearAnalysis()
+    public void ClearAnalysis(bool ignoreKing = false,BaseFigure figure = null)
     {
         Grid.Instance.AnalysisCells = new bool[8,8];
         foreach (var item in Grid.Instance.ObjFigures)
         {
             if (item != null)
             {
+                if(item.type == FigureType.King && ignoreKing )
+                    continue;
+                if(figure == item) continue;
                 item.availableMoves.Clear();
             }
         }
     }
 
 
-    public void RequstAnalysis()
+    public void RequstAnalysis(bool ignoreKing = false,BaseFigure figure = null)
     {
+        Debug.Log("StartAnalysys");
         foreach (var item in Grid.Instance.ObjFigures)
         {
             if (item != null)
             {
+                if(item.type == FigureType.King && ignoreKing)
+                    continue;
+                if(figure == item) continue;
                 if (NextPlayer() == item.color && item.type == FigureType.Pawn)
                 {
                     item.FillAnalysisGrid(Grid.Instance.AnalysisCells); 
@@ -142,32 +150,9 @@ public class ChessManager : MonoBehaviour
         }
     }
 
-    public void KingSecurity(FigureColor color)
-    {
-        foreach (var figure in Grid.Instance.ObjFigures)
-        {
-            if(figure == null) continue;
-            List<int2> avaMoves = new List<int2>();
-            avaMoves.AddRange(figure.availableMoves.Keys);
-            foreach (var figureAvailableMove in avaMoves)
-            {
-                if (color == FigureColor.White)
-                {
-                    if (!WhiteKing.retraceShah.Contains(figureAvailableMove))
-                    {
-                        figure.availableMoves.Remove(figureAvailableMove);
-                    }
-                }
-                else
-                {
-                    if (!BlackKing.retraceShah.Contains(figureAvailableMove))
-                    {
-                        figure.availableMoves.Remove(figureAvailableMove);
-                    }
-                }
-            }
-        }
-    }
+   
+
+
 
     public bool CheckIsShahBlack()
     {

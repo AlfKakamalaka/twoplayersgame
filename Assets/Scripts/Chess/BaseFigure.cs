@@ -29,7 +29,7 @@ public abstract class BaseFigure : MonoBehaviour
     [SerializeField] private Material whiteMaterial;
     [SerializeField] private Material blackMaterial;
     public abstract void AnalyseMove();
-
+    
     public virtual void FillAnalysisGrid(bool[,] analysisGrid)
     {
         foreach (var move in availableMoves)
@@ -37,6 +37,60 @@ public abstract class BaseFigure : MonoBehaviour
             analysisGrid[move.Key.x, move.Key.y] = true;
         }
     }
+    
+    public bool CheckNonRetraceMove(int x, int y)
+    {
+
+        var chessManager = ChessManager.instance;
+        if (color == FigureColor.White)
+        {
+            if (chessManager.isShahWhite)
+            {
+                bool any = true;
+                foreach (var ret in chessManager.WhiteKing.retraceShah)
+                {
+                    if (ret.x == x && ret.y == y)
+                    {
+                        Debug.Log("Retrace" + x + " " + y);
+                        any= false;
+                    }
+                    
+                }
+
+                return any;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else
+        {
+            if (chessManager.isShahBlack)
+            {
+                bool any = true;
+                foreach (var ret in chessManager.BlackKing.retraceShah)
+                {
+                    if (ret.x == x && ret.y == y)
+                    {
+                        Debug.Log("Retrace" + x + " " + y);
+                        any = false;
+                    }
+                    
+                }
+
+                return any;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        Debug.Log("Nothing");
+        return false;
+        
+    }
+    
     public void Init()
     {
         if(color == FigureColor.Black)

@@ -1619,7 +1619,7 @@ MonoBehaviour:
   canvasShah: {fileID: 1403103856}
   textShah: {fileID: 1965934486}
   player: 0
-  isAI: 1
+  isAI: 0
   isShahBlack: 0
   isShahWhite: 0
   textMat: {fileID: 1860636121}

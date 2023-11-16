@@ -35,6 +35,7 @@ public class Knight : BaseFigure
     private void CalculateMove(Grid grid, int x, int y)
     {
         if(!grid.IsOnBoard(x,y)){return;}
+        if(CheckNonRetraceMove(x, y)) return;
         if (grid.TypesOnBoard[x, y] == FigureType.King)
         {
             King king = grid.ObjFigures[x, y] as King;
